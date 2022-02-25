@@ -93,7 +93,7 @@ molecular_descriptors = st.sidebar.checkbox('Check ONLY if you have previously c
 if molecular_descriptors == True:
     uploaded_file_1 = st.sidebar.file_uploader("Upload your molecular descriptors in a TXT file. Your file should have a column called 'NAME'", type=["txt"])
     st.sidebar.markdown("""
-    [Example TXT molecular descriptor file](https://raw.githubusercontent.com/Capigol/iRaPCA_v1/main/example_descriptors.txt)
+    [Example TXT molecular descriptor file](test/example_descriptors.txt)
     """)
 
 else:
@@ -101,7 +101,7 @@ else:
     uploaded_file_1 = st.sidebar.file_uploader("Upload a CSV file with one SMILES per line", type=["csv"])
     st.sidebar.write("SMILES must be contained in the first column, or in a column named SMILES in any position")
     st.sidebar.markdown("""
-    [Example CSV input file](https://raw.githubusercontent.com/Capigol/iRaPCA_v1/main/example_molecules.csv)
+    [Example CSV input file](test/example_molecules.csv)
     """)
 
 clustering_setting = st.sidebar.checkbox('Check to change the default configuration')
@@ -847,7 +847,7 @@ if uploaded_file_1 is not None:
 else:
     st.info('Awaiting for CSV file to be uploaded.')
     if st.button('Press to run with the Example Dataset'):
-        uploaded_file_1 = open("example_molecules.csv","r")
+        uploaded_file_1 = open("test/example_molecules.csv","r")
         st.markdown("**Running with the example dataset**", unsafe_allow_html=True)
         clustering_final_function(uploaded_file_1)
 
