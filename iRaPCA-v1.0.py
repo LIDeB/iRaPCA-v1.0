@@ -73,7 +73,7 @@ The next workflow summarizes the steps performed by this method:
     
 """)
 
-image = Image.open('clustering_irapca_workflow.png')
+image = Image.open('Workflow_iRaPCA_streamlit2022.png.png')
 st.image(image, caption='Clustering Workflow')
 
 #st.subheader(":rocket:" "**Fast Tutorial** " "[iRaPCA](https://www.youtube.com/watch?v=6HoBdFDY9Ic&ab_channel=LIDeBUNLP)")
