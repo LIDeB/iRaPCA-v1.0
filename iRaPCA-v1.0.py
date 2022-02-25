@@ -93,7 +93,7 @@ molecular_descriptors = st.sidebar.checkbox('Check ONLY if you have previously c
 if molecular_descriptors == True:
     uploaded_file_1 = st.sidebar.file_uploader("Upload your molecular descriptors in a TXT file. Your file should have a column called 'NAME'", type=["txt"])
     st.sidebar.markdown("""
-    [Example TXT molecular descriptor file](test/example_descriptors.txt)
+    [Example TXT molecular descriptor file](https://raw.githubusercontent.com/LIDeB/iRaPCA-v1.0/main/test/example_descriptors.txt)
     """)
 
 else:
@@ -101,7 +101,7 @@ else:
     uploaded_file_1 = st.sidebar.file_uploader("Upload a CSV file with one SMILES per line", type=["csv"])
     st.sidebar.write("SMILES must be contained in the first column, or in a column named SMILES in any position")
     st.sidebar.markdown("""
-    [Example CSV input file](test/example_molecules.csv)
+    [Example CSV input file](https://raw.githubusercontent.com/LIDeB/iRaPCA-v1.0/main/test/example_molecules.csv)
     """)
 
 clustering_setting = st.sidebar.checkbox('Check to change the default configuration')
