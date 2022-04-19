@@ -9,6 +9,8 @@ Created on Tue Jul 27 11:26:28 2021
 
 #%%
 # Needed packages
+import time
+start = time.time()
 import streamlit as st
 import pandas as pd
 import base64
@@ -637,6 +639,11 @@ def setting_info(vuelta,dataframe_final_1):
     settings.append(["Total rounds :", str(vuelta)])
     settings.append(["Total clusters :", str(len(dataframe_final_1))])
     settings.append(["",""])
+    end = time.time()
+    hours, rem = divmod(end-start, 3600)
+    minutes, seconds = divmod(rem, 60)
+    settings.append(["{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds)])  
+    
     settings.append(["To cite the application, please reference: ","XXXXXXXXXXX"])   
     settings_df = pd.DataFrame(settings)
     return settings_df
