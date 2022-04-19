@@ -88,8 +88,8 @@ st.image(image, caption='Clustering Workflow')
 ########### OPTIONS #######
 # SIDEBAR
 
-st.sidebar.header('Molecular descriptors')
-molecular_descriptors = st.sidebar.checkbox('Check ONLY if you have previously calculated the molecular descriptors')
+#st.sidebar.header('Molecular descriptors')
+molecular_descriptors = st.sidebar.checkbox('Molecular descriptors', help='Check ONLY if you have previously calculated the molecular descriptors')
 if molecular_descriptors == True:
     uploaded_file_1 = st.sidebar.file_uploader("Upload your molecular descriptors in a TXT file. Your file should have a column called 'NAME'", type=["txt"])
     st.sidebar.markdown("""
@@ -104,7 +104,7 @@ else:
     [Example CSV input file](https://raw.githubusercontent.com/LIDeB/iRaPCA-v1.0/main/test/example_molecules.csv)
     """)
 
-clustering_setting = st.sidebar.checkbox('Check to change the default configuration')
+clustering_setting = st.sidebar.checkbox('Advanced settings', help='Check to change the default configuration')
 if clustering_setting == True:
     st.sidebar.header('Dimensionality reduction')    
     threshold_variance = st.sidebar.slider('Threshold variance', 0.00, 0.20, 0.05, 0.01)
@@ -152,13 +152,6 @@ else:
     graficar_silhouette = True
     graficar_scatter = True
 
-    
-st.sidebar.title(":speech_balloon: Contact Us")
-st.sidebar.info(
-"""
-If you are looking to contact us, please
-[:e-mail:](mailto:lideb@biol.unlp.edu.ar) or [Twitter](https://twitter.com/LIDeB_UNLP)
-""")
     
     
 #%%
@@ -841,7 +834,9 @@ def clustering_final_function(uploaded_file_1):
     return
 
 if uploaded_file_1 is not None:
-    run = st.button("RUN")
+    st.sidebar.markdown("-------------------")
+    run = st.sidebar.button("RUN")
+    st.sidebar.markdown("-------------------")
     if run == True:
         clustering_final_function(uploaded_file_1)
 else:
@@ -851,7 +846,15 @@ else:
         st.markdown("**Running with the example dataset**", unsafe_allow_html=True)
         clustering_final_function(uploaded_file_1)
 
-  
+
+        
+st.sidebar.title(":speech_balloon: Contact Us")
+st.sidebar.info(
+"""
+If you are looking to contact us, please
+[:e-mail:](mailto:lideb@biol.unlp.edu.ar) or [Twitter](https://twitter.com/LIDeB_UNLP)
+""")
+    
 #Footer edit
 
 footer="""<style>
