@@ -21,3 +21,4 @@ dependencies:
         - seaborn
         - scikit-learn==0.22.2.post1
         - validclust
+        - protobuf~=3.19.0
