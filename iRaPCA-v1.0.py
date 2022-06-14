@@ -859,7 +859,7 @@ If you are looking to contact us, please
 """)
 
 st.write("""
-## Cite us:
+### Cite us:
 
 *iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules*
 
