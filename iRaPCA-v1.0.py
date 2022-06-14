@@ -861,13 +861,13 @@ If you are looking to contact us, please
 st.write("""
 ## Cite us:
 
-iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules
+*iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules*
 
 Denis N. Prada Gori, Manuel A. Llanos, Carolina L. Bellera, Alan Talevi, and Lucas N. Alberca
 
 Journal of Chemical Information and Modeling
 
-DOI: 10.1021/acs.jcim.2c00265
+[DOI: 10.1021/acs.jcim.2c00265](https://pubs.acs.org/doi/10.1021/acs.jcim.2c00265)
     
 """)    
 
