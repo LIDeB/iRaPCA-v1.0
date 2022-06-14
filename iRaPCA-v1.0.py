@@ -81,15 +81,20 @@ st.image(image, caption='Clustering Workflow')
 #st.subheader(":rocket:" "**Fast Tutorial** " "[iRaPCA](https://www.youtube.com/watch?v=6HoBdFDY9Ic&ab_channel=LIDeBUNLP)")
 #st.markdown(" ")
 
-#st.markdown("""
-         **Cite us: iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules
+st.write("""
+# Cite us:
 
+iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules
 Denis N. Prada Gori, Manuel A. Llanos, Carolina L. Bellera, Alan Talevi, and Lucas N. Alberca
+Journal of Chemical Information and Modeling
+DOI: 10.1021/acs.jcim.2c00265
+    
+""")
 
-Journal of Chemical Information and Modeling Article ASAP
-
-DOI: 10.1021/acs.jcim.2c00265**
-         """)
+#st.markdown("Cite us: iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules")
+#st.markdown("Denis N. Prada Gori, Manuel A. Llanos, Carolina L. Bellera, Alan Talevi, and Lucas N. Alberca")
+#st.markdown("Journal of Chemical Information and Modeling"
+#"DOI: 10.1021/acs.jcim.2c00265")
 
 #%%
 
