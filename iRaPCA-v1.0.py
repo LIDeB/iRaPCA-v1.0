@@ -151,15 +151,6 @@ else:
     graficar_silhouette = True
     graficar_scatter = True
 
-st.write("""
-## Cite us:
-
-iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules
-Denis N. Prada Gori, Manuel A. Llanos, Carolina L. Bellera, Alan Talevi, and Lucas N. Alberca
-Journal of Chemical Information and Modeling
-DOI: 10.1021/acs.jcim.2c00265
-    
-""")    
     
 #%%
 
@@ -866,7 +857,20 @@ st.sidebar.info(
 If you are looking to contact us, please
 [:e-mail:](mailto:lideb@biol.unlp.edu.ar) or [Twitter](https://twitter.com/LIDeB_UNLP)
 """)
+
+st.write("""
+## Cite us:
+
+iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules
+
+Denis N. Prada Gori, Manuel A. Llanos, Carolina L. Bellera, Alan Talevi, and Lucas N. Alberca
+
+Journal of Chemical Information and Modeling
+
+DOI: 10.1021/acs.jcim.2c00265
     
+""")    
+
 #Footer edit
 
 footer="""<style>
