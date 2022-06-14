@@ -82,8 +82,14 @@ st.image(image, caption='Clustering Workflow')
 #st.markdown(" ")
 
 #st.markdown("""
-#         **To cite the application, please reference XXXXXXXXX**
-#         """)
+         **Cite us: iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules
+
+Denis N. Prada Gori, Manuel A. Llanos, Carolina L. Bellera, Alan Talevi, and Lucas N. Alberca
+
+Journal of Chemical Information and Modeling Article ASAP
+
+DOI: 10.1021/acs.jcim.2c00265**
+         """)
 
 #%%
 
