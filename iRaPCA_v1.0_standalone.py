@@ -695,7 +695,7 @@ if __name__ == '__main__':
                         for index, row in cluster_moleculas_.iterrows():
                             moleculas_compiladas[index] = row['Cluster, padre']
                     print(f'For the selected Threshold correlation filter ({threshold_correlation}) none of the subsets have between {min_desc_subset} and {max_desc_subset} descriptors in round {vuelta}')
-                    sys.exit()
+                    break
             
             print(f"**Round: {vuelta}**")
             print("- Subsets with a number of descriptors between the limits: " + str(len(lista_subsets_seleccionados[j])))
