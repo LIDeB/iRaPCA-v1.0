@@ -194,9 +194,9 @@ def calcular_descriptores(uploaded_file_1,descriptores_calculados):
         problematic_smiles = []
         rows_to_retain = []
 
-        for molecule in list_of_smiles:
+        for molecule in df_initial["SMILES"]:
             if smiles_standardization == True:
-                t.markdown("Standardizing molecules: " + str(i+1) +"/" + str(len(list_of_smiles)))
+                t.markdown("Standardizing molecules: " + str(i+1) +"/" + str(len(df_initial)))
             i = i+1
             try:
                 mol = Chem.MolFromSmiles(molecule)
