@@ -180,11 +180,13 @@ def calcular_descriptores(uploaded_file_1,descriptores_calculados):
         data1x = pd.DataFrame()
         suppl = []
         st.markdown("**Step 1: Standarization and descriptor calculation**")
-        df_initial = pd.read_csv(uploaded_file_1)
-        if "SMILES" in df_initial:
-            list_of_smiles = df_initial["SMILES"]
+        df_initial = pd.read_csv(uploaded_file_1, header = None)
+        if "SMILES" in df_initial.iloc[0].values:
+            new_header = df_initial.iloc[0]
+            df_initial = df_initial[1:]
+            df_initial.columns = new_header
         else:
-            list_of_smiles = df_initial.iloc[:, 0]
+            df_initial.rename(columns = {0: 'SMILES'}, inplace = True)
         s = Standardizer()
 
         i = 0
@@ -342,9 +344,8 @@ def clustering(subsets_ok, min_desc_subset: int, max_desc_subset: int, range_n_c
             siluetas = PCA_clustering(descriptores_normalizados, range_n_clusters, num_pca, siluetas)
             subsets_seleccionados.append(i)
 
-    tabla_final = pd.DataFrame(siluetas).T
+    tabla_final = pd.DataFrame(siluetas, columns = range_n_clusters).T
     tabla_final.columns = subsets_seleccionados
-    tabla_final.index = range_n_clusters
     return tabla_final, subsets_seleccionados
 
 #%%
@@ -738,7 +739,7 @@ def clustering_final_function(uploaded_file_1):
                         for index, row in cluster_moleculas_.iterrows():
                             moleculas_compiladas[index] = row['Cluster, padre']
                     st.error(f'For the selected Threshold correlation filter ({limite_correlacion}) none of the subsets have between {min_desc_subset} and {max_desc_subset} descriptors in round {vuelta}')
-                    st.stop()
+                    break
           
             st.markdown(f"**Round: {vuelta}**")
             st.write("- Subsets with a number of descriptors between the limits: " + str(len(lista_subsets_seleccionados[j])))
