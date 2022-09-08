@@ -641,7 +641,10 @@ def setting_info(vuelta,dataframe_final_1):
     minutes, seconds = divmod(rem, 60)
     settings.append(["{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds)])  
     
-    settings.append(["To cite the application, please reference: ","XXXXXXXXXXX"])   
+    settings.append(["To cite the application, please reference: ","iRaPCA and SOMoC: Development and Validation of Web Applications for New Approaches for the Clustering of Small Molecules"]) 
+    settings.append(["","Denis N. Prada Gori, Manuel A. Llanos, Carolina L. Bellera, Alan Talevi, and Lucas N. Alberca"])
+    settings.append(["","Journal of Chemical Information and Modeling"])
+    settings.append(["","DOI: 10.1021/acs.jcim.2c00265"])
     settings_df = pd.DataFrame(settings)
     return settings_df
 
