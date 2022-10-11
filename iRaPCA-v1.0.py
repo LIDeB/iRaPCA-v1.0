@@ -743,7 +743,7 @@ def clustering_final_function(uploaded_file_1):
                         for index, row in cluster_moleculas_.iterrows():
                             moleculas_compiladas[index] = row['Cluster, padre']
                     st.error(f'For the selected Threshold correlation filter ({limite_correlacion}) none of the subsets have between {min_desc_subset} and {max_desc_subset} descriptors in round {vuelta}')
-                    sys.exit()
+                    st.stop()
           
             st.markdown(f"**Round: {vuelta}**")
             st.write("- Subsets with a number of descriptors between the limits: " + str(len(lista_subsets_seleccionados[j])))
