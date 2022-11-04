@@ -1,7 +1,10 @@
-streamlit==1.2.0
+streamlit
 streamlit_tags
-rdkit==2020.09.1.0
+rdkit-pypi
 molvs
 mordred
+scikit-learn
 validclust
+plotly
+matplotlib
 protobuf~=3.19.0
