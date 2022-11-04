@@ -1,4 +1,4 @@
-name: LUDe
+name: iRaPCA
 channels:
 - rdkit
 - conda-forge
